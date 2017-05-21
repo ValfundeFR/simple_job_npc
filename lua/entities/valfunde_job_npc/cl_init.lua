@@ -24,6 +24,30 @@ surface.CreateFont("Valfunde_JNPF_32B",
 	weight = 850,
 	antialias = true,
 })
+surface.CreateFont("Valfunde_JNPC_22B",
+{
+	font = "Arial",
+	extended = false,
+	size = 22,
+	weight = 500,
+	antialias = true,
+})
+surface.CreateFont("Valfunde_JNPC_18B",
+{
+	font = "Arial",
+	extended = false,
+	size = 18,
+	weight = 750,
+	antialias = true,
+})
+surface.CreateFont("Valfunde_JNPC_15B",
+{
+	font = "Arial",
+	extended = false,
+	size = 15,
+	weight = 500,
+	antialias = true,
+})
 
 --[[-------------------------------------------------------------------------
 Create blur function 
@@ -101,7 +125,7 @@ local function JobNPCMenu()
 	l:SetSpaceY(5)
 
 	for k, v in pairs(Valfunde.JNPC.CreateNPC[ID].jobs) do
-		job = _G[v] -- job = INT, v = String 
+		job = _G[v]
 
 		local job_slot = team.NumPlayers(job)
 		local max_job_slot = 0
@@ -133,9 +157,9 @@ local function JobNPCMenu()
 				if hV then
 				    surface.DrawRect(0, 0, 700, 100)
 				end
-				draw.SimpleText(job_name.." :", "Header_Text_Police_Bold_Font_22", 105, 2.5, Color(255, 255,255,255))
-				draw.SimpleText(job_slot.."/"..max_job_slot, "Job_Count_Police_Bold_Font_18", 50, 90, Color(255, 255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-				draw.DrawText(job_description, "Main_Text_Police_Bold_Font_15", 105, 25, Color(255, 255,255,255))
+				draw.SimpleText(job_name.." :", "Valfunde_JNPC_22B", 105, 2.5, Color(255, 255,255,255))
+				draw.SimpleText(job_slot.."/"..max_job_slot, "Valfunde_JNPC_18B", 50, 90, Color(255, 255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+				draw.DrawText(job_description, "Valfunde_JNPC_15B", 105, 25, Color(255, 255,255,255))
 			end
 		else
 			j:SetEnabled(false)
@@ -143,9 +167,9 @@ local function JobNPCMenu()
 				draw.RoundedBox(0, 0, 0, 700, 100, color.a_black)
 				surface.SetDrawColor(130, 130, 130, 255)
 				surface.DrawOutlinedRect(0, 0, 700, 100)
-				draw.SimpleText(job_name.." :", "Header_Text_Police_Bold_Font_22", 105, 2.5, Color(255, 255,255,255))
-				draw.SimpleText(job_slot.."/"..max_job_slot, "Job_Count_Police_Bold_Font_18", 50, 90, Color(255, 255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-				draw.DrawText(job_description, "Main_Text_Police_Bold_Font_15", 105, 25, Color(255, 255,255,255))
+				draw.SimpleText(job_name.." :", "Valfunde_JNPC_22B", 105, 2.5, Color(255, 255,255,255))
+				draw.SimpleText(job_slot.."/"..max_job_slot, "Valfunde_JNPC_18B", 50, 90, Color(255, 255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+				draw.DrawText(job_description, "Valfunde_JNPC_15B", 105, 25, Color(255, 255,255,255))
 			end
 		end
 		j.DoClick = function()
