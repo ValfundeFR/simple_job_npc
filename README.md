@@ -1,3 +1,5 @@
+``BE CAREFUL, THIS SCRIPT CAN BE OUTDATED AND CREATE SOME ERROR``
+
 > Simple Job NPC is a simple job system which replace the jobs tab by NPC and add more roleplay.
 >
 > ##### This script is for  ``DarkRP only``
