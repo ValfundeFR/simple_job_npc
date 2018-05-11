@@ -27,7 +27,7 @@
 # HOW TO SETUP THE SCRIPT
 - Extract the folder with the script into the addons folder.
 - Edit the config file in **_"lua/autorun/job_npc_config.lua"_**
-- ``CAREFUL, YOUR PLAYERMODELS NEED TO BE IN A TABLE.``
+- ``CAREFUL, YOUR JOB'S PLAYERMODELS NEED TO BE IN A TABLE.``
 
 
 #### How to create NPC
